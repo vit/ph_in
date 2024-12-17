@@ -1,11 +1,11 @@
 
-name: ph_in_${ENV_NAME}
+name: postfix_alias
 
 services:
 
-  mongo:
+  postfix:
     restart: always
-    container_name: ph_in_mail_${ENV_NAME}
+    container_name: postfix_alias
     ports:
       - "25:25"
     build: 
@@ -23,16 +23,3 @@ secrets:
     file: .secrets/mydestination
 
 
-
-
-
-        #networks:
-        #  frontend:
-        #    external: true 
-        #    name: frontend 
-        #  mongo:
-
-        #volumes:
-        #  mongo-data:
-
- 
