@@ -1,10 +1,6 @@
 
-The code was partially taken from catatnight/postfix
 
-
-
-
-docker-postfix
+postfix-alias
 ==============
 
 run postfix as a relay with aliases for incoming mail
