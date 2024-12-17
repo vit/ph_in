@@ -1,0 +1,38 @@
+
+name: ph_in_${ENV_NAME}
+
+services:
+
+  mongo:
+    restart: always
+    container_name: ph_in_mail_${ENV_NAME}
+    ports:
+      - "25:25"
+    build: 
+      context: ./postfix
+      dockerfile: Dockerfile
+    secrets:
+      - virtual
+      - mydestination
+
+
+secrets:
+  virtual:
+    file: .secrets/virtual
+  mydestination:
+    file: .secrets/mydestination
+
+
+
+
+
+        #networks:
+        #  frontend:
+        #    external: true 
+        #    name: frontend 
+        #  mongo:
+
+        #volumes:
+        #  mongo-data:
+
+ 
