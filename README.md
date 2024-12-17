@@ -15,11 +15,11 @@ cd postfix_alias
 
 mkdir .secrets
 
-cat >> .secrets/mydestination <<EOF
+cat > .secrets/mydestination <<EOF
 example1.com
 EOF
 
-cat >> .secrets/virtual <<EOF
+cat > .secrets/virtual <<EOF
 user_1@example1.com   me@example2.com
 user_2@example1.com   her@example3.com
 EOF
